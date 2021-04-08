@@ -100,6 +100,7 @@ function evenFinder(nums) {
       evens.push(nums[i]);
     }
   }
+  return evens;
 }
 
 
@@ -132,12 +133,13 @@ let array2 = [];
 function divider (numbersArray) {
   for (var i = 0; i < numbersArray.length; i++) {
     if (numbersArray[i] %2 === 0) {
-      array1.push(numbersArray[i])
+      array1.push(numbersArray[i]);
     } else { 
       array2.push(numbersArray[i]);
     }
   }
-  array0.push(array1, array2)
+  array0.push(array1, array2);
+  return array0;
 }
 
 
