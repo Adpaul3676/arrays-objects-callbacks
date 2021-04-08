@@ -142,7 +142,6 @@ function divider (numbersArray) {
   return array0;
 }
 
-
 ////////// PROBLEM 7 //////////
 
 // Do not edit the code below.
@@ -162,8 +161,14 @@ var getRandomArbitrary = function() {
 */
 
 //Code Here
-
-
+function finder (numbers) {
+  for (var i = 0; i < numbers.length; i++) {
+    if (numbers[i] === getRandomArbitrary()) {
+      return true;
+    }
+  }
+  return false;
+}
 
 ////////// PROBLEM 8 //////////
 
@@ -191,8 +196,31 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
+let arrayNull = []
 
+function removeItem (myGroceryList, item) {
+  if (item) {
+    for (var i = 0; i <  myGroceryList.length; i++) {
+      if (myGroceryList[i] === item) {
+        myGroceryList.splice(myGroceryList[i], 1);
+        return myGroceryList
+      } else {
+        return myGroceryList
+      }
+    }
+  } else {
+    return arrayNull
+  }
+}
 
+function addItem (myGroceryList, item) {
+  if (item) {
+    myGroceryList.unshift(item)
+  return myGroceryList
+  } else {
+    return arrayNull
+  }
+}
 
 ////////// PROBLEM 9 //////////
 
@@ -201,7 +229,13 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
-
+function maker () {
+  let array215 = []
+  for (var i = 0; i < 215; i++) {
+    array215.push(i + 1)
+  }
+  return array215
+}
 
 
 ////////// PROBLEM 10 //////////
@@ -218,6 +252,14 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   
 //Code Here
 
+function addTen (numbers) {
+  let result = numbers.map(Number);
+  for (let i = 0; i < 7; i++) {
+  result.push(result[0] + 10);
+  result.shift();
+  }
+  return result
+}
 
 
 ////////// PROBLEM 11 //////////
@@ -243,7 +285,15 @@ for(var i = 0; i < num2; i++){
 
 //Code Here
 
-
+function longer (arr1, arr2) {
+  if (arr1.length > arr2.length) {
+    console.log ('1');
+    return arr1
+  } else {
+    console.log ('2');
+    return arr2
+  }
+}
 
 /*
   As a continuation of the previous problem, write another function called 'both'.
@@ -255,7 +305,15 @@ for(var i = 0; i < num2; i++){
 
 //Code Here
 
-
+function both (arr1, arr2) {
+  let array3 = []
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] === arr2[i]) {
+      array3.push (arr1[i])
+    }
+  }
+  return array3
+}
 
 ////////// PROBLEM 12 //////////
 
@@ -296,7 +354,11 @@ var colt = {
 
 //Code Here
 
+function dmEmp (a, c, d) {
+  devMountainEmployees.push (a, c, d)
+}
 
+dmEmp (colt, ryan, joe)
 
 /*
   Now let's say Cahlan has to take a leave of absence.
@@ -316,7 +378,7 @@ var colt = {
 */
 
 //Code Here
-
+let users = []
 
 
 /*
@@ -337,10 +399,29 @@ var user1 = {
 // Do not edit the code above.
 
 //Code Here
+let user2 = {
+  name: 'Normal Man',
+  email: 'normalman@gmail.com',
+  password: 'averagedude1',
+  username: 'normalman'
+}
 
+let user3 = {
+  name: 'Crazy Man',
+  email: 'crazyman@gmail.com',
+  password: 'crazydude2',
+  username: 'crazyman'
+}
+
+function creation (a, b, c) {
+  users.push (a, b, c);
+}
+
+creation (user1, user2, user3);
 
 
 /*
+
   Now you have a very common data structure. 
   Twitter is a good use case.
   It's easy to imagine that your followers list on Twitter is an array full of objects and those objects contain properties about the specific person you follow.
@@ -352,7 +433,14 @@ var user1 = {
 
 //Code Here
 
+function deletion () {
+  for (let i = 0; i < users.length; i++)
+  if (users[i].name === 'Mark') {
+    users.splice (users[i], 1);
+  }
+}
 
+deletion ();
 
 /*
   The activity we just did is very much how data works in 'the real world'.
