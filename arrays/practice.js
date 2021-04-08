@@ -126,11 +126,11 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 */
 
 //Code Here
-let array0 = [];
-let array1 = [];
-let array2 = [];
 
 function divider (numbersArray) {
+  let array0 = [];
+  let array1 = [];
+  let array2 = [];
   for (var i = 0; i < numbersArray.length; i++) {
     if (numbersArray[i] %2 === 0) {
       array1.push(numbersArray[i]);
