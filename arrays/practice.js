@@ -253,12 +253,10 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 //Code Here
 
 function addTen (numbers) {
-  let result = numbers.map(Number);
-  for (let i = 0; i < 7; i++) {
-  result.push(result[0] + 10);
-  result.shift();
+  for (let i = 0; i < numbers.length; i++) {
+  numbers[i] = +numbers[i] + 10;
   }
-  return result
+  return numbers
 }
 
 
@@ -308,8 +306,10 @@ function longer (arr1, arr2) {
 function both (arr1, arr2) {
   let array3 = []
   for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] === arr2[i]) {
-      array3.push (arr1[i])
+    for (let j = 0; j < arr2.length; j++) {
+      if (arr1[i] === arr2[j]) {
+        array3.push (arr1[i])
+      } 
     }
   }
   return array3
@@ -435,8 +435,8 @@ creation (user1, user2, user3);
 
 function deletion () {
   for (let i = 0; i < users.length; i++)
-  if (users[i].name === 'Mark') {
-    users.splice (users[i], 1);
+  if (users[i].email === 'mark.mciver@devmounta.in') {
+    users.splice (i, 1);
   }
 }
 
