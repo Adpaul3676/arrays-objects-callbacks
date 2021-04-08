@@ -1,4 +1,4 @@
-/* 
+7/* 
   Once you complete a problem, refresh ./SpecRunner.html in your browser and check to see if the problem's test(s) are passing.
   Passed tests will be indicated by a green circle.
   Failed tests will be indicated by a red X.
@@ -28,7 +28,9 @@
 */
 
 // Code Here 
-
+function first (x, y) {
+  y(x[0]);
+}
 // Do not edit the code below.
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 
@@ -39,7 +41,6 @@ first(names, function(firstName){
 // Do not edit the code above.
 
 
-
 ////////// PROBLEM 2 //////////
 
 /*
@@ -48,7 +49,9 @@ first(names, function(firstName){
 */
 
 //Code Here
-
+function last (x, y) {
+  y(x[x.length - 1])
+}
 // Do not edit the code below.
 last(names, function(lastName){
   console.log('The last name in names is ' + lastName);
@@ -66,6 +69,10 @@ last(names, function(lastName){
 */
 
 //Code Here
+
+function multiply(x, y, z) {
+  z(x * y);
+}
 
 // Do not edit the code below.
 multiply(4, 3, function(answer){
@@ -85,6 +92,16 @@ multiply(4, 3, function(answer){
 */
 
 //Code Here 
+
+function contains (x, y, z) {
+  for (let i = 0; i < x.length; i++) {
+    if (x[i] === y) {
+      z(true);
+    } else {
+      z(false);
+    }
+  }
+}
 
 // Do not edit the code below.
 contains(names, 'Colt', function(result){
@@ -107,6 +124,17 @@ contains(names, 'Colt', function(result){
 
 //Code Here
 
+function uniq (x, y) {
+  for (let i = 0; i < x.length; i++) {
+    for (let j = i + 1; j < x.length; j++) {
+      if (x[j] === x[i]) {
+        x.splice (j, 1);
+      }
+    }
+  }
+  y (x);
+}
+
 // Do not edit the code below.
 uniq(names, function(uniqArr){
   console.log('The new names array with all the duplicate items removed is ', uniqArr);
@@ -124,6 +152,12 @@ uniq(names, function(uniqArr){
 
 //Code Here 
 
+function each (x, y) {
+  for (let i = 0; i < x.length; i++) {
+    y (x[i], i);
+  }
+}
+
 // Do not edit the code below.
 each(names, function(item, indice){
   console.log('The item in the ' + indice + ' position is ' + item)
@@ -140,6 +174,14 @@ each(names, function(item, indice){
 */
 
 // Code here
+
+function getUserById (x, y, z) {
+  for (let i = 0; i < x.length; i++) {
+    if (x[i].id == y) {
+      z (x[i]);
+    }
+  }
+}
 
 // Do not edit the code below.
 var users = [
